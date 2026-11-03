@@ -206,6 +206,7 @@ jobs:
           } > "$RUNNER_TEMP/localization-prompt.txt"
 
           copilot -p "$(cat "$RUNNER_TEMP/localization-prompt.txt")" \
+            --add-dir="$RUNNER_TEMP" \
             --allow-tool=read \
             --allow-tool=write \
             --allow-tool=grep \
